@@ -58,9 +58,11 @@ if(e.key ==='ArrowUp') {
     direction = 'north'
 }
 })
-document.addEventListener('keyup', funtion(e) {
+
+document.addEventListener('keyup', function(e) {
     direction = null 
 })
+
 move(character).to(100, 250);
 
 move(newImage("assets/tree.png")).to(200, 450);
