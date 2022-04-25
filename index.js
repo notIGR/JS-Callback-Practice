@@ -48,14 +48,14 @@ document.addEventListener ('keydown', function(e) {
 if(e.key ==='ArrowLeft') {
     direction = 'west'
 }
-if(e.key ==='ArrowLeft') {
-    direction = 'west'
+if(e.key ==='ArrowRight') {
+    direction = 'east'
 }
-if(e.key ==='ArrowLeft') {
-    direction = 'west'
+if(e.key ==='ArrowDown') {
+    direction = 'south'
 }
-if(e.key ==='ArrowLeft') {
-    direction = 'west'
+if(e.key ==='ArrowUp') {
+    direction = 'north'
 }
 })
 move(character).to(100, 250);
