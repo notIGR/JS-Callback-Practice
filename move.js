@@ -1,57 +1,59 @@
 function move(element) {
-    element.style.position = 'fixed'
+  element.style.position = "fixed";
 
-    function moveToCoordinates(left, bottom) {
-        element.style.left = left + 'px'
-        element.style.bottom = bottom + 'px'
-    }
-    //you should come back and try to update all these to arrow functions later!!!!!!!!!!!!!!!!!!
-function moveWithArrowKeys (left, bottom) {
+  function moveToCoordinates(left, bottom) {
+    element.style.left = left + "px";
+    element.style.bottom = bottom + "px";
+  }
+  //you should come back and try to update all these to arrow functions later!!!!!!!!!!!!!!!!!!
+  function moveWithArrowKeys(left, bottom) {
     let direction = null;
-    let x = 100;
-    let y = 250;
+    let x = left;
+    let y = bottom;
 
-    element.style.left = x + 'px'
-    element.style.bottom = y +'px' // are these added top this page to prevent the hard coding???
+    element.style.left = x + "px";
+    element.style.bottom = y + "px"; // are these added top this page to prevent the hard coding???
 
     function moveCharacter() {
-    if (direction === "west") {
-      x = x - 1;
-    }
-    if (direction === "east") {
+      if (direction === "west") {
+        x = x - 1;
+      }
+      if (direction === "east") {
         x = x + 1;
       }
       if (direction === "south") {
-        y = y - 1; 
+        y = y - 1;
       }
       if (direction === "north") {
         y = y + 1;
       }
-      element.style.left =x + 'px'
-      element.style.bottom = y + 'px'
+      element.style.left = x + "px";
+      element.style.bottom = y + "px";
     }
-    setInterval(moveCharacter,1)
+    setInterval(moveCharacter, 1);
 
-    document.addEventListener ('keydown', function(e) {
-    if(e.key ==='ArrowLeft') {
-        direction = 'west'
-    }
-    if(e.key ==='ArrowRight') {
-        direction = 'east'
-    }
-    if(e.key ==='ArrowDown') {
-        direction = 'south'
-    }
-    if(e.key ==='ArrowUp') {
-        direction = 'north'
-    }
-    })
-    
-    document.addEventListener('keyup', function(e) {
-        direction = null 
-    })
-}
-    return {
-        to: moveToCoordinates
-    }
+    document.addEventListener("keydown", function (e) {
+      if (e.repeat) return;
+
+      if (e.key === "ArrowLeft") {
+        direction = "west";
+      }
+      if (e.key === "ArrowRight") {
+        direction = "east";
+      }
+      if (e.key === "ArrowDown") {
+        direction = "south";
+      }
+      if (e.key === "ArrowUp") {
+        direction = "north";
+      }
+    });
+
+    document.addEventListener("keyup", function (e) {
+      direction = null;
+    });
+  }
+  return {
+    to: moveToCoordinates,
+  };
 }

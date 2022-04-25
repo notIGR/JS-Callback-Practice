@@ -22,6 +22,7 @@ if (direction === "east") {
   character.style.left =x + 'px'
   character.style.bottom = y + 'px'
 }
+
 setInterval(moveCharacter,1)
 document.addEventListener ('keydown', function(e) {
 if(e.key ==='ArrowLeft') {
@@ -42,9 +43,9 @@ document.addEventListener('keyup', function(e) {
     direction = null 
 })
 
+
+
 move(character).to(100, 250);
-
-
 
 move(newImage("assets/tree.png")).to(200, 450);
 move(newImage("assets/pillar.png")).to(350, 250);
