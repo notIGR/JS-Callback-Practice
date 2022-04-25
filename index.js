@@ -13,7 +13,6 @@ if (direction === "west") {
 if (direction === "east") {
     x = x + 1;
   }
-  //forgot to switch X and Y for directions up/down VS left/right
   if (direction === "south") {
     y = y - 1; 
   }
@@ -22,28 +21,8 @@ if (direction === "east") {
   }
   character.style.left =x + 'px'
   character.style.bottom = y + 'px'
-  //should these be contained inside a function???
 }
 setInterval(moveCharacter,1)
-// would setInterval = (function()) => {} be the arrow funtion???
-/* alternate way to use 'setInterval'
-setInterval(function(){ 
-    if(direction === 'west'){
-        x = x - 1
-    }
-    if(direction === 'north'){
-        y = y + 1
-    }
-    if(direction === 'east'){
-        x = x + 1
-    }
-    if(direction === 'south'){
-        y = y - 1
-    }
-    character.style.left = x + 'px'
-    character.style.bottom = y + 'px'
-}, 1)
-*/
 document.addEventListener ('keydown', function(e) {
 if(e.key ==='ArrowLeft') {
     direction = 'west'
@@ -65,6 +44,8 @@ document.addEventListener('keyup', function(e) {
 
 move(character).to(100, 250);
 
+
+
 move(newImage("assets/tree.png")).to(200, 450);
 move(newImage("assets/pillar.png")).to(350, 250);
 move(newImage("assets/pine-tree.png")).to(450, 350);
@@ -73,3 +54,24 @@ move(newImage("assets/well.png")).to(500, 575);
 move(newItem("assets/sword.png")).to(500, 555);
 move(newItem("assets/shield.png")).to(165, 335);
 move(newItem("assets/staff.png")).to(600, 250);
+
+
+// would setInterval = (function()) => {} be the arrow funtion???
+/* alternate way to use 'setInterval'
+setInterval(function(){ 
+    if(direction === 'west'){
+        x = x - 1
+    }
+    if(direction === 'north'){
+        y = y + 1
+    }
+    if(direction === 'east'){
+        x = x + 1
+    }
+    if(direction === 'south'){
+        y = y - 1
+    }
+    character.style.left = x + 'px'
+    character.style.bottom = y + 'px'
+}, 1)
+*/
