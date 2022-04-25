@@ -10,7 +10,10 @@ function moveWithArrowKeys (left, bottom) {
     let direction = null;
     let x = 100;
     let y = 250;
-    
+
+    element.style.left = x + 'px'
+    element.style.bottom = y +'px' // are these added top this page to prevent the hard coding???
+
     function moveCharacter() {
     if (direction === "west") {
       x = x - 1;
@@ -47,7 +50,6 @@ function moveWithArrowKeys (left, bottom) {
     document.addEventListener('keyup', function(e) {
         direction = null 
     })
-
 }
     return {
         to: moveToCoordinates
