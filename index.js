@@ -3,11 +3,6 @@ move(inventory).to(0, 0);
 
 const character = newImage("assets/green-character/static.gif");
 
-
-
-
-
-
 move(character).moveWithArrowKey(100, 250);
 
 move(newImage("assets/tree.png")).to(200, 450);
@@ -19,22 +14,20 @@ move(newItem("assets/sword.png")).to(500, 555);
 move(newItem("assets/shield.png")).to(165, 335);
 move(newItem("assets/staff.png")).to(600, 250);
 
-
-// would setInterval = (function()) => {} be the arrow funtion???
 // alternate way to use 'setInterval'
-setInterval(function(){ 
-    if(direction === 'west'){
-        x = x - 1
-    }
-    if(direction === 'north'){
-        y = y + 1
-    }
-    if(direction === 'east'){
-        x = x + 1
-    }
-    if(direction === 'south'){
-        y = y - 1
-    }
-    character.style.left = x + 'px'
-    character.style.bottom = y + 'px'
-}, 1)
+setInterval(() => {
+  if (direction === "west") {
+    x = x - 1;
+  }
+  if (direction === "north") {
+    y = y + 1;
+  }
+  if (direction === "east") {
+    x = x + 1;
+  }
+  if (direction === "south") {
+    y = y - 1;
+  }
+  character.style.left = x + "px";
+  character.style.bottom = y + "px";
+}, 1);
