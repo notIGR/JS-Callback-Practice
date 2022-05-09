@@ -1,7 +1,7 @@
 const move = (element) => {
   element.style.position = "fixed";
 
-  function moveToCoordinates(left, bottom) {
+  const moveToCoordinates = (left, bottom) => {
     element.style.left = left + "px";
     element.style.bottom = bottom + "px";
   }
