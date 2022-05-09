@@ -1,4 +1,4 @@
-function move(element) {
+const move = (element) => {
   element.style.position = "fixed";
 
   function moveToCoordinates(left, bottom) {
@@ -6,7 +6,7 @@ function move(element) {
     element.style.bottom = bottom + "px";
   }
   //you should come back and try to update all these to arrow functions later!!!!!!!!!!!!!!!!!!
-  function moveWithArrowKeys(left, bottom, callback) {
+  const moveWithArrowKeys = (left, bottom) => {
     let direction = null;
     let x = left;
     let y = bottom;
@@ -14,7 +14,7 @@ function move(element) {
     element.style.left = x + "px";
     element.style.bottom = y + "px"; // are these added top this page to prevent the hard coding???
 
-    function moveCharacter() {
+    const moveCharacter = () => {
       if (direction === "west") {
         x = x - 1;
       }
