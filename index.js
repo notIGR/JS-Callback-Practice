@@ -10,16 +10,16 @@ const handelDirectionChange = (direction) => {
     character.src = "assets/green-character/static.gif";
   }
   if (direction === "west") {
-    x = x - 1;
+    character.src = "assets/green-character/west.gif";
   }
   if (direction === "north") {
-    y = y + 1;
+    character.src = "assets/green-character/north.gif";
   }
   if (direction === "east") {
-    x = x + 1;
+    character.src = "assets/green-character/east.gif";
   }
   if (direction === "south") {
-    y = y - 1;
+    haracter.src = "assets/green-character/south.gif";
   }
   character.style.left = x + "px";
   character.style.bottom = y + "px";
